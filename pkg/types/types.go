@@ -36,4 +36,15 @@ type Payment struct {
 	ID int
 	Amount Money
 	Category Category
+	Status Status
 }
+
+// Статус представляет собой статус платежа.
+type Status string
+
+// Преопределённые статусы платежей.
+const (
+	StatusOk Status = "OK"
+	StatusFail Status = "FAIL"
+	StatusInProgress Status = "INPROGRESS"
+)
